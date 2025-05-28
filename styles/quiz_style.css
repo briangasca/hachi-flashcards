@@ -1,0 +1,110 @@
+html{
+    border-radius: 20px;
+    
+    font-family: "Figtree", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    background: url('/images/tiny_hachi.png'), linear-gradient(180deg,rgba(123, 171, 196, 1) 42%, rgba(255, 255, 255, 1) 100%);
+    background-position: top left;
+    animation: mymove 50s linear infinite;
+}
+
+#layout {
+    display: flex;
+    align-items: center;  
+    flex-direction: column;
+    gap: 30px;                
+    padding: 20px;
+    margin: auto;
+    
+}
+
+body {
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    flex-direction: row;
+    display: flex;
+}
+
+@keyframes mymove {
+    0% {background-position: top left;} 100% {background-position: center;}
+}
+
+#curr_question {
+    font-size: 30px;
+    align-items: center;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+#choices label {
+    cursor: pointer;
+}
+
+#choices input {
+    cursor: pointer;
+}
+
+
+
+
+
+
+#choices {
+    width: 100%;
+    height: 100%;
+    padding-top: 5%;
+    /* padding: 10%; */
+}
+
+#choices label > * {
+    padding: 10px;
+    display: inline;
+    cursor: pointer;
+
+}
+
+.choice_image { 
+    width:250px;
+    height:250px;
+    transition: 0.2s ease-in-out;
+    border-radius: 30px;
+}
+
+.choice_image:hover {
+    width: 275px;
+    height: 275px;
+}
+
+
+
+
+
+
+#main-content {
+    padding-top: 50px;
+    margin-top: 10%;
+    align-items: center;
+    display: flex;
+}
+
+#hachi_images {
+    display: flex;
+    flex-direction: row;
+}
+
+#hachi_images > * {
+    width: 200px;
+}
+
+#hachi_devious {
+    align-items: center;
+    display: flex;
+    margin: 10%;
+    margin-left: 20%;
+    width: 300px;
+}
+
