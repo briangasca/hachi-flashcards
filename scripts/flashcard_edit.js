@@ -102,4 +102,5 @@ save_btn.addEventListener('click', () => {
         front_text.value = '';
         back_text.value = '';
     }
+    curr_flashcard_num.innerHTML = (curr_flashcard + 1) + "/" + flashcards.length;
 })
