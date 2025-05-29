@@ -107,7 +107,7 @@ body {
     height: 60px;
     border-radius: 50%;
     border: none;
-    background: rgb(66, 142, 182);
+    background: rgb(20, 108, 156);
     cursor: pointer;
     font-size: 20px;
     color: white;
@@ -127,17 +127,114 @@ body {
 
 #modal_content {
     position: absolute;
-    bottom: 15%; /* Below the button */
+    bottom: 15%; 
     left: 50%;
-    background: rgb(11, 72, 105);
+    background: rgb(20, 108, 156);
     border: 1px solid #ccc;
     padding: 12px;
-    border-radius: 8px;
+    border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     z-index: 10;
     color: white;
-  }
 
-.hidden {
-    display: none;
+    opacity: 0;
+    transform: translateX(-10px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#modal_content.show {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+}
+
+#save_btn {
+    margin-top: 10px;
+    background: white;
+    border-radius: 8px;
+    border-color: transparent;
+    cursor: pointer;
+}
+
+#cancel_btn {
+    margin-top: 10px;
+    background: white;
+    border-radius: 8px;
+    border-color: transparent;
+    cursor: pointer;
+}
+
+#front-input {
+    border-radius: 8px;
+    border-color: transparent;
+}
+
+#back-input {
+    border-radius: 8px;
+    border-color: transparent;
+}
+
+#hachi_ears {
+    margin-bottom: -14px;
+    width: 525px;
+}
+
+#card {
+    margin-bottom: 20px;
+    color: white;
+    background: #6cadc7;
+    justify-content: center;
+    display: flex;  
+    align-items: center;
+    width: 475px;
+    height: 275px;
+    padding: 25px;
+    font-size: 22px;
+    border-radius: 50px;
+    border-color: #3e2620;
+    border-width: 3px;
+    border-top-width: 10px;
+    border-style:solid;
+    background-image: url('');
+    word-break: break-all;
+}
+
+#flip_btn {
+    margin: 8px;
+    background: rgb(20, 108, 156); 
+    width: 150px;
+    height: 60px;
+    font-size: 20px;
+    border-radius: 8px;
+    border-color: transparent;
+    cursor: pointer;
+    border-color: #3e2620;
+    color: white;
+}
+
+#prev_btn {
+    margin: 8px;
+    background: rgb(20, 108, 156);
+    width: 150px;
+    height: 60px;
+    font-size: 20px;
+    border-radius: 8px;
+    border-color: transparent;
+    cursor: pointer;
+    border-color: #3e2620;
+    color: white;
+}
+
+#next_btn {
+    margin: 8px;
+    background: rgb(20, 108, 156);
+    width: 150px;
+    height: 60px;
+    font-size: 20px;
+    border-radius: 8px;
+    border-color: transparent;
+    cursor: pointer;
+    border-color: #3e2620;
+    color: white;
 }

@@ -63,11 +63,11 @@ const save_btn = document.getElementById("save_btn");
 const cancel_btn = document.getElementById("cancel_btn");
 
 add_btn.addEventListener('click', () => {
-    popupContent.classList.toggle("hidden");
+    popupContent.classList.toggle("show");
 })
 
 cancel_btn.addEventListener('click', () => {
-    popupContent.classList.toggle("hidden");
+    popupContent.classList.toggle("show");
 })
 
 const front_text = document.getElementById("front-input");
