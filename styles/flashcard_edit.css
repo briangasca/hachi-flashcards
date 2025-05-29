@@ -5,7 +5,7 @@ html{
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
-    background: url('/images/tiny_hachi.png'), linear-gradient(180deg,rgba(123, 171, 196, 1) 42%, rgba(255, 255, 255, 1) 100%);
+    background: url('../images/tiny_hachi.png'), linear-gradient(180deg,rgba(123, 171, 196, 1) 42%, rgba(255, 255, 255, 1) 100%);
     background-position: top left;
     animation: mymove 50s linear infinite;
     width: 100%;
