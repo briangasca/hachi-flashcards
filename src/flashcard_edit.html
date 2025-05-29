@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gogas</title>
+    <link rel="stylesheet" href="/styles/flashcard_edit.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="layout">
+        <div id="curr_question">Flashcards</div>
+        <div id="hachi_images">
+            <img id="hachi_wave" src="/images/hachi_wave.gif" alt="">
+            <div id="modal">
+                <button id="add_button">+</button>
+                <div id="modal_content" class="hidden">
+                  <label>Front:</label>
+                  <input type="text" id="front-input"><br>
+                  <label>Back:</label>
+                  <input type="text" id="back-input"><br>
+                  <button id="save_btn">Save</button>
+                  <button id="cancel_btn">Cancel</button>
+                </div>
+              </div>
+        </div>
+        
+        
+
+        <div id="main_content">
+            <div id="flashcard_container">
+                <div class="front" id="card">Card</div>
+                <button id="flip_btn">Flip</button>
+                <button id="prev_btn">Previous</button>
+                <button id="next_btn">Next</button>
+            </div>
+        </div>
+    </div>
+    
+    
+
+    
+    <script src="/scripts/flashcard_edit.js"></script>
+</body>
+</html>

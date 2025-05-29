@@ -40,6 +40,7 @@ function updateQuiz(imageClicked){
         if(imageClicked == correct_answer){
             correct_answer++;
         }
+        
         curr_question_num++;
         curr_question_string = 'question_' + curr_question_num;
         if(answers < curr_question_num){

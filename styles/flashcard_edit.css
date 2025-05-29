@@ -8,6 +8,8 @@ html{
     background: url('/images/tiny_hachi.png'), linear-gradient(180deg,rgba(123, 171, 196, 1) 42%, rgba(255, 255, 255, 1) 100%);
     background-position: top left;
     animation: mymove 50s linear infinite;
+    width: 100%;
+    height: 100%;
 }
 
 #layout {
@@ -68,15 +70,14 @@ body {
 }
 
 .choice_image { 
-    width:250px;
+    width:600px;
     height:250px;
     transition: 0.2s ease-in-out;
     border-radius: 30px;
 }
 
 .choice_image:hover {
-    width: 275px;
-    height: 275px;
+    margin-top: -2%;
 }
 
 
@@ -88,7 +89,6 @@ body {
     padding-top: 50px;
     margin-top: 10%;
     align-items: center;
-    display: flex;
 }
 
 #hachi_images {
@@ -100,12 +100,44 @@ body {
     width: 200px;
 }
 
-#hachi_devious {
-    align-items: center;
-    display: flex;
-    margin: 10%;
-    margin-left: 20%;
-    width: 300px;
+#add_button {
+    margin-top: 75px;
+    margin-left: 25px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background: rgb(66, 142, 182);
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+    box-shadow: inset 0 0 0 0 rgb(11, 72, 105);
+    transition: ease-in-out 0.5s;
 }
 
+#add_button:hover {
+    box-shadow: inset 300px 0 0 0 rgb(11, 72, 105);
+}
 
+#modal {
+    position:relative;
+    display: inline-block;
+
+}
+
+#modal_content {
+    position: absolute;
+    bottom: 15%; /* Below the button */
+    left: 50%;
+    background: rgb(11, 72, 105);
+    border: 1px solid #ccc;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 10;
+    color: white;
+  }
+
+.hidden {
+    display: none;
+}
