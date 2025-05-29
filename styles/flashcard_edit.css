@@ -180,7 +180,7 @@ body {
     width: 525px;
 }
 
-#card {
+#text-contain{
     margin-bottom: 20px;
     color: white;
     background: #6cadc7;
@@ -198,25 +198,25 @@ body {
     border-style:solid;
     background-image: url('');
     word-break: break-all;
+    cursor: pointer;
 }
 
-#flip_btn {
-    margin: 8px;
-    background: rgb(20, 108, 156); 
-    width: 150px;
-    height: 60px;
-    font-size: 20px;
-    border-radius: 8px;
-    border-color: transparent;
-    cursor: pointer;
-    border-color: #3e2620;
-    color: white;
+#front-indicator {
+    position: fixed;
+    margin-top: 275px;
+    text-align: center;
+    font-size: 18px;
+}
+
+#curr_flashcard {
+    position: fixed;
+    margin-bottom: 275px;
 }
 
 #prev_btn {
     margin: 8px;
     background: rgb(20, 108, 156);
-    width: 150px;
+    width: 200px;
     height: 60px;
     font-size: 20px;
     border-radius: 8px;
@@ -224,12 +224,13 @@ body {
     cursor: pointer;
     border-color: #3e2620;
     color: white;
+    margin-left: 45px;
 }
 
 #next_btn {
     margin: 8px;
     background: rgb(20, 108, 156);
-    width: 150px;
+    width: 200px;
     height: 60px;
     font-size: 20px;
     border-radius: 8px;

@@ -1,23 +1,34 @@
 
 //mock flashcards, adding database later. Array of Key/Value pairs.
 const flashcards = [
-    { front: "What is the capital of France?", back: "Paris" },
-    { front: "What is the boiling point of water?", back: "100°C" },
-    { front: "What does HTML stand for?", back: "HyperText Markup Language" }
+    { front: "What is the capital of France?", back: "Paris" }
   ];
   
 curr_flashcard = 0;
 let showing_front = true;
 
 card = document.getElementById("card");
-flip_btn = document.getElementById("flip_btn");
-prev_btn = document.getElementById("prev_btn");
+rev_btn = document.getElementById("prev_btn");
 next_btn = document.getElementById("next_btn");
+front_indicator = document.getElementById("front-indicator");
+text_container = document.getElementById("text-contain");
+curr_flashcard_num = document.getElementById("curr_flashcard");
+
+curr_flashcard_num.innerHTML = (curr_flashcard + 1) + "/" + flashcards.length;
 
 card.innerHTML = flashcards[curr_flashcard]['front'];
 
-flip_btn.addEventListener('click', function (){
-    
+
+function frontStatus(currFrontStatus){
+    if(currFrontStatus){
+        front_indicator.innerHTML = "Front";
+    } else {
+        front_indicator.innerHTML = "Back";
+    }
+}
+
+text_container.addEventListener('click', function (){
+    console.log(showing_front);
     if(curr_flashcard >= 0 && curr_flashcard < flashcards.length){
         if(showing_front){
             card.innerHTML = flashcards[curr_flashcard]['back'];
@@ -25,6 +36,7 @@ flip_btn.addEventListener('click', function (){
             card.innerHTML = flashcards[curr_flashcard]['front'];
         }
         showing_front = !showing_front;
+        frontStatus(showing_front);
     }
     
 })
@@ -39,6 +51,8 @@ prev_btn.addEventListener('click', function (){
         card.innerHTML = flashcards[curr_flashcard]['front'];
         showing_front = true;
     }
+    frontStatus(showing_front);
+    curr_flashcard_num.innerHTML = (curr_flashcard + 1) + "/" + flashcards.length;
 
 })
 
@@ -52,10 +66,12 @@ next_btn.addEventListener('click', function (){
         card.innerHTML = flashcards[curr_flashcard]['front'];
         showing_front = true;
     }
+    frontStatus(showing_front);
+    curr_flashcard_num.innerHTML = (curr_flashcard + 1) + "/" + flashcards.length;
     
 })
 
-//ADDING FUNCTIONALITY
+//ADDING BUTTON FUNCTIONALITY
 
 const add_btn = document.getElementById("add_button");
 const popupContent = document.getElementById("modal_content");
